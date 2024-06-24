@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Scanner</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://unpkg.com/html5-qrcode" type="text/javascript"></script>
+    <script type="module" src="index.js"></script>
+</head>
+<body>
+
+    <button id="scanBtn">Click</button>
+
+    <div id="scannerEventSelectPopup" class="scannerEventSelectPopup">
+        <div class="scannerEventSelect-wrapper">
+            <button class="close-scannerEventSelect-icon" id="closeEventBtn"><i class='bx bx-x'></i></button>
+            <div class="contents-scannerEventSelect-wrapper">
+                <label class="label-for-scannerEventSelect" for="scannerEventSelect">Select an event that you want to scan</label>
+                 <select id="teacherOptions" name="teacher">
+                    <option value="" disabled selected>Select Teacher</option>
+                    <option value="Mr. Joriz Chiong">Mr. Joriz Chiong</option>
+                    <option value="Mr. Carlos Salen" >Mr. Carlos Salen</option>
+                    <option value="Mr. Jonathan Navarro">Mr. Jonathan Navarro</option>
+                    <option value="Mr. John Edward Miranda" >Mr. John Edward Miranda</option>
+                </select>
+
+                <select id="eventOptions" name="event">
+                    <option value="" disabled selected>Select Event</option>
+                    <option value="Hackaton">Hackaton</option>
+                    <option value="QUiz Bee">QUiz Bee</option>
+                    <option value="Digital Art">Digital Art</option>
+                    <option value="Typing Master">Typing Master</option>
+                </select>
+                
+                <div class="button-container-submit">
+                    <button type="submit" id="submitButton">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="scannerContainer" class="scannerContainer">
+        <div id="reader" style="width: 500px;"></div>
+        <div id="result"></div>
+    </div>
+
+    <div id="popup" class="popup">
+        <div>
+            <h2>QR Results</h2>
+        </div>
+        <div id="popup-content" class="popup-content"></div>
+    </div>
+</body>
+</html>
